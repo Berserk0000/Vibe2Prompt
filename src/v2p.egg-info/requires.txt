@@ -1,0 +1,5 @@
+typer
+pyperclip
+google-genai
+textual
+rich

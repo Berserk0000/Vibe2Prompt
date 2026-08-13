@@ -1,0 +1,21 @@
+Please overhaul the Textual UI styling and interactive behavior in `vibe2prompt` to create a production-grade TUI that matches the design aesthetic of Claude Code and OpenCode.
+
+1. LAYOUT & COLOR THEME (OpenCode / Claude Code Vibe):
+- Background & Canvas: Use a dark Catppuccin Mocha / Slate palette (`#181825` background, `#1E1E2E` panel surfaces).
+- Top Header Bar: Create a sleek header bar fixed at the top with:
+`⚡ vibe2prompt | Technical Spec Engine`
+- Prompt Cards:
+- Render User Prompts inside right-aligned or subtle dark callout cards with a distinct border color (`#89B4FA`).
+- Render Generated Technical Specs inside distinct Markdown viewer panels with soft rounded/cyan borders (`#94E2D5`), clean padding, and full syntax highlighting.
+- Input Section: Dock a sleek `Input` box at the bottom styled with a `❯ ` prompt indicator and a subtle border.
+- Status & Footer: Display keybindings in the footer bar (`Ctrl+C` Exit | `Ctrl+Y` Copy Prompt | `PageUp/PageDown` Scroll).
+
+2. SCROLLING & NAVIGATION FIXED:
+- Enable `can_focus = True` and set `overflow-y: scroll;` in CSS on the output scroll container.
+- Automatically auto-scroll to the bottom (`scroll_end(animate=True)`) whenever a new prompt finish generating.
+- Bind `PageUp`, `PageDown`, `Up`, and `Down` keys so users can smoothly scroll through long generated prompts even when the Input box is active.
+- Ensure mouse wheel scrolling works over the main message container.
+
+3. ERROR & GENERATION STATES:
+- While generating, show an active loading status widget or animated spinner inside the chat area.
+- If the API fails, display a styled red notification box (`#F38BA8`) with a clear error message instead of freezing or crashing.

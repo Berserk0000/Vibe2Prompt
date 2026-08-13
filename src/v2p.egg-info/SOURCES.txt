@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/v2p/__init__.py
+src/v2p/banner.py
+src/v2p/llm.py
+src/v2p/main.py
+src/v2p/tui.py
+src/v2p.egg-info/PKG-INFO
+src/v2p.egg-info/SOURCES.txt
+src/v2p.egg-info/dependency_links.txt
+src/v2p.egg-info/entry_points.txt
+src/v2p.egg-info/requires.txt
+src/v2p.egg-info/top_level.txt

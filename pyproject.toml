@@ -1,0 +1,23 @@
+[project]
+name = "v2p"
+version = "0.1.0"
+description = "Transform informal prompts into structured, technical prompts"
+dependencies = [
+    "typer",
+    "pyperclip",
+    "google-genai",
+    "textual",
+    "rich",
+]
+requires-python = ">=3.8"
+authors = [
+    {name = "User", email = "user@example.com"}
+]
+
+[project.scripts]
+v2p = "v2p.main:app"
+v2p-tui = "v2p.tui:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

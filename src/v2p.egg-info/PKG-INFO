@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: v2p
+Version: 0.1.0
+Summary: Transform informal prompts into structured, technical prompts
+Author-email: User <user@example.com>
+Requires-Python: >=3.8
+Requires-Dist: typer
+Requires-Dist: pyperclip
+Requires-Dist: google-genai
+Requires-Dist: textual
+Requires-Dist: rich
